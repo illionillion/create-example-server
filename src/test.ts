@@ -3,6 +3,7 @@ import { generateExample } from "./lib/createExample";
 import * as dotenv from "dotenv";
 dotenv.config();
 
+// 以下の4つをPOSTで受け取る
 const apiKey = process.env.OPENAI_API_KEY;
 const wordLang = "英語";
 const wordName = "hello";
@@ -22,7 +23,7 @@ const main = async () => {
       openai
     ); // ChatGPTから例文を生成
     if (result.success) {
-      console.log(result.content);
+      console.log(result.content); // これを返すWebAPIを作る
       console.log("作成完了");
     } else {
       console.log(result.content);
