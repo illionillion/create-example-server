@@ -17,7 +17,8 @@ const main = async () => {
     const openai = new OpenAIApi(configuration);
     console.log("作成中");
     const result = await generateExample(
-      `${wordLang}言語の${wordName}という${wordMean}という意味の単語を用いて簡単な例文を作成して`,
+      // `${wordLang}言語の${wordName}という${wordMean}という意味の単語を用いて簡単な例文を作成して`,
+      `Create one simple example sentence using the word ${wordName}, which means ${wordMean} in the ${wordLang} language. Include a Japanese translation at the end.`,
       "gpt-3.5-turbo",
       "user",
       openai
